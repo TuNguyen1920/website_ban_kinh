@@ -1,0 +1,41 @@
+.checkboxFilter {
+    float: left;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.mg-bt-10 {
+    margin-bottom: 10px !important;
+}
+.text-info-payment {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+.link-login {
+    float: right;
+    font-weight: bold;
+    font-size: 16px !important;
+
+}
+.icon-header-item-pay {
+    font-size: 20px !important;
+    position: absolute;
+    margin-right: 20px;
+    margin-left: -25px;
+}
+.icon-delete-product-cart {
+    font-size: 20px;
+    color: #000;
+}
+.transport {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid;
+    padding: 10px 5px;
+}
+.radio-transport {
+    font-size: 25px;
+    width: 25px;
+    float: left;
+    margin-top: 7px;
+}

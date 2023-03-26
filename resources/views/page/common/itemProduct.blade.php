@@ -3,7 +3,7 @@
     <div class="block2">
         <div class="block2-pic hov-img0">
             <img src="{{ !empty($product->pro_avatar) ? asset(pare_url_file($product->pro_avatar)) : asset('admin/dist/img/no-image.png') }}" alt="{{ $product->pro_name }}">
-            <a href=""
+            <a href="{{ route('product.detail', ['id' => $product->id, 'slug' => $product->pro_slug ]) }}"
                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 product_view" idproduct="{{ $product->id }}">
                 Chi tiết
             </a>
@@ -11,7 +11,7 @@
 
         <div class="block2-txt flex-w flex-t p-t-14">
             <div class="block2-txt-child1 flex-col-l ">
-                <a href="" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                <a href="{{ route('product.detail', ['id' => $product->id, 'slug' => $product->pro_slug ]) }}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                     {{ $product->pro_name }}
                 </a>
 

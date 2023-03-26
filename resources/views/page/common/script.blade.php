@@ -8,7 +8,7 @@
 <!--===============================================================================================-->
 <script src="{{ asset('page/vendor/select2/select2.min.js') }}"></script>
 <script>
-    var urlSearch = "";
+    var urlSearch = "{{ route('page.product') }}";
     $(".js-select2").each(function () {
         $(this).select2({
             minimumResultsForSearch: 20,
@@ -114,7 +114,7 @@
     var message = "{{ session('error') }}";
         swal("Thông báo", message, "error");
     @endif
-    
+    var routeWiewedProducts = '{{ route('load.viewed.products') }}'
 </script>
 <!--===============================================================================================-->
 <script src="{{ asset('page/js/main.js') }}"></script>

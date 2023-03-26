@@ -1,7 +1,7 @@
 <div class="col-sm-6 col-md-4 p-b-40">
     <div class="blog-item">
         <div class="hov-img0">
-            <a href="">
+            <a href="{{ route('page.news.detail', ['id' => $article->id, 'slug' => $article->a_slug]) }}">
                 <img src="{{ !empty($article->a_avatar) ? asset(pare_url_file($article->a_avatar)) : asset('admin/dist/img/no-image.png') }}" alt="{{ $article->a_name }}">
             </a>
         </div>
@@ -30,7 +30,7 @@
             </div>
 
             <h4 class="p-b-12">
-                <a href="" class="mtext-101 cl2 hov-cl1 trans-04" title="">
+                <a href="{{ route('page.news.detail', ['id' => $article->id, 'slug' => $article->a_slug]) }}" class="mtext-101 cl2 hov-cl1 trans-04" title="">
                     {{ $article->a_name }}
                 </a>
             </h4>

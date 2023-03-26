@@ -20,9 +20,15 @@
                 </h3>
             </div>
             <div class="row isotope-grid">
-                
+                @foreach($productSellers as $key => $seller)
+                    @include('page.common.itemProduct', ['product' => $seller])
+                @endforeach
             </div>
-            
+            <div class="flex-c-m flex-w w-full p-t-45">
+                <a href="{{ route('page.product', ['type' => 1]) }}" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+                    Xem tất cả
+                </a>
+            </div>
         </div>
     </section>
     <section class="sec-product bg0 p-t-50 p-b-50">
@@ -33,10 +39,14 @@
                 </h3>
             </div>
             <div class="row isotope-grid">
-              
+                @foreach($productNews as $key => $new)
+                    @include('page.common.itemProduct', ['product' => $new])
+                @endforeach
             </div>
             <div class="flex-c-m flex-w w-full p-t-45">
-                
+                <a href="{{ route('page.product', ['type' => 3]) }}" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+                    Xem tất cả
+                </a>
             </div>
         </div>
     </section>
@@ -50,7 +60,9 @@
             </div>
 
             <div class="row">
-                
+                @foreach($articles as $key => $article)
+                    @include('page.common.itemNew', compact('article'))
+                @endforeach
             </div>
         </div>
     </section>

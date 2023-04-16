@@ -9,9 +9,9 @@ class Cart extends Model
 {
     use HasFactory;
 
-    const VNP_URL = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    const VNP_HASH_SECRET = "DTHXNFNBUMNKFKQOZVHTXUXNUQUUXMTV";
-    const VNP_TMN_CODE = "Y4U88XFK";
+    const VNP_URL = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+    const VNP_HASH_SECRET = "YVVVDXXUGTGPFEVRUBWEXKIIYNNFUUTZ";
+    const VNP_TMN_CODE = "B6D7F86K";
 
     protected $table = 'carts';
     public $timestamps = true;

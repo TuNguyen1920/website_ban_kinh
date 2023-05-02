@@ -24,6 +24,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    const STATUS = [
+		1 => 'Hoạt động',
+		2 => 'Đã khóa'
+	];
+
     /**
      * The attributes that should be hidden for arrays.
      *

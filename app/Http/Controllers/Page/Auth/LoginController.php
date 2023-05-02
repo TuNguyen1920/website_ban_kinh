@@ -60,6 +60,10 @@ class LoginController extends Controller
             return redirect()->back()->with('danger', 'Thông tin tài khoản không tồn tại');
         }
 
+        if ($user->status == User::LOCK) {
+            return redirect()->back()->with('error', 'Tài khoản của bạn đã bị khóa');
+        }
+
         if (Auth::guard('users')->attempt($data)) {
             return redirect()->route('page.home');
         }

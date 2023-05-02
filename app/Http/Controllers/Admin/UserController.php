@@ -15,6 +15,7 @@ class UserController extends Controller
         view()->share([
             'user_active' => 'active',
             'roles' => $role->all(),
+            'status' => User::STATUS
         ]);
     }
     /**

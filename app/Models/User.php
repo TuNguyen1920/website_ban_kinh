@@ -29,6 +29,9 @@ class User extends Authenticatable
 		2 => 'Đã khóa'
 	];
 
+    const ACTIVE  = 1;
+    const LOCK  = 2;
+
     /**
      * The attributes that should be hidden for arrays.
      *

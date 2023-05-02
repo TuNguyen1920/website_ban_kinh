@@ -58,7 +58,7 @@
                                                         @endforeach
                                                     @endif
                                                 </td>
-                                                <td>{{ $user->status }}</td>
+                                                <td>{{ isset($status[$user->status]) ? $status[$user->status] : '' }}</td>
                                                 <td class="text-center">
                                                     <a class="btn btn-primary btn-sm" href="{{ route('user.update', $user->id) }}">
                                                         <i class="fas fa-pencil-alt"></i>

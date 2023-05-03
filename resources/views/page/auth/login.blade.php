@@ -34,7 +34,7 @@
                             Đăng nhập
                         </button>
                         <br />
-                        <p class="txt-center p-b-30"><a href="" style="margin-top: 10px">Quên mật khẩu</a></p>
+                        <p class="txt-center p-b-30"><a href="{{ route('page.user.forgot.password') }}" style="margin-top: 10px">Quên mật khẩu</a></p>
                     </form>
                 </div>
 

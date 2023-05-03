@@ -180,7 +180,12 @@ Route::group(['namespace' => 'Page'], function() {
         Route::post('/account/login', 'LoginController@postLogin')->name('account.login');
         Route::post('/register/account', 'RegisterController@postRegister')->name('account.register');
         Route::get('/logout', 'LoginController@logout')->name('page.user.logout');
+
         Route::get('/forgot/password', 'ForgotPasswordController@forgotPassword')->name('page.user.forgot.password');
+        Route::post('post/forgot/password', 'ForgotPasswordController@sendMailResetPassword')->name('post.user.forgot.password');
+
+        Route::get('/new/password/{token}', 'ForgotPasswordController@newPassword')->name('page.new.password');
+        Route::post('/post/new/password/{token}', 'ForgotPasswordController@postNewPassword')->name('post.page.new.password');
     });
 
     Route::group(['middleware' =>['users']], function() {
